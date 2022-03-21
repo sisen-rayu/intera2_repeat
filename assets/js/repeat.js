@@ -9,12 +9,14 @@ canvas.height = innerHeight
 const wave = {
   y: canvas.height / 2,
   length: 0.01,
-  amplitude: 100
+  amplitude: 100,
+  frequency: 0.01
 }
 
 gui.add(wave, 'y' , 0, canvas.height)
 gui.add(wave, 'length', -0.01, 0.01)
 gui.add(wave,'amplitude', -300, 300)
+gui.add(wave,'frequency', -0.01, 1)
 
 
 
@@ -25,7 +27,7 @@ const animate = () => {
   c.moveTo(0, canvas.height / 2)
 
   for(let i = 0; i < canvas.width; i++) {
-    c.lineTo(i, wave.y + Math.sin(i * wave.length) * wave.amplitude)
+    c.lineTo(i, wave.y + Math.sin(i * wave.length + wave.frequency) * wave.amplitude)
   }
 
 c.stroke()
@@ -33,3 +35,5 @@ c.stroke()
 }
 
 animate();
+
+//14:46
