@@ -13,10 +13,10 @@ const wave = {
   frequency: 0.01
 }
 
-gui.add(wave, 'y' , 0, canvas.height)
-gui.add(wave, 'length', -0.01, 0.01)
-gui.add(wave,'amplitude', -300, 300)
-gui.add(wave,'frequency', -0.01, 1)
+gui.add(wave, 'y' , 0, canvas.height)//高さ
+gui.add(wave, 'length', -0.01, 0.01)//長さ
+gui.add(wave,'amplitude', -300, 300) //振れ幅
+gui.add(wave,'frequency', -0.01, 1) //周期,頻度
 
 
 
