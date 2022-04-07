@@ -1,5 +1,5 @@
 
-const gui = new dat.GUI()
+const gui = new dat.GUI() //dat追加してみた
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
@@ -36,4 +36,3 @@ c.stroke()
 
 animate();
 
-//14:46
